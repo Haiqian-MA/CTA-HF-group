@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numba
 
-data = pd.read_csv( 'data\\tick-levelII\\bu1912 (8).csv', header=None)
+data = pd.read_csv('data/tick-levelII/ag1912 (2).csv', header=None)
 
 data = data.iloc[:,[3,4,5,10,15,16,17,18,19,20,25,26,27,28,29]]
 
