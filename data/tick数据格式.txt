@@ -1,0 +1,39 @@
+tick数据格式
+
+InstrumentID ///合约代码
+TradingDay ///交易日
+nowTime   ///本地时间
+UpdateTime ///行情时间
+LastPrice///最新价
+Volume ///数量
+HighestPrice///最高价
+LowestPrice///最低价
+OpenPrice///今开盘
+ClosePrice///今收盘
+AskPrice[0]///申卖价一
+AskPrice[1]
+AskPrice[2]
+AskPrice[3]
+AskPrice[4]
+AskVolume[0]///申卖量一
+AskVolume[1]
+AskVolume[2]
+AskVolume[3]
+AskVolume[4]
+BidPrice[0]///申买价一
+BidPrice[1]
+BidPrice[2]
+BidPrice[3]
+BidPrice[4]
+BidVolume[0]///申买量一
+BidVolume[1]
+BidVolume[2]
+BidVolume[3]
+BidVolume[4]
+UpperLimitPrice///涨停板价
+LowerLimitPrice///跌停板价
+OpenInterest///昨持仓量
+Turnover///成交金额
+PreClosePrice///昨收盘
+PreOpenInterest///昨持仓量
+PreSettlementPrice///上次结算价
