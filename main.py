@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('data/tick-levelII/ag1912 (2).csv', header=None)
+data = pd.read_csv('data/tick-levelII/bu1912 (4).csv', header=None)
 
 #%%
 plt.plot(data[4])
@@ -48,14 +48,14 @@ for i in range(data.shape[0]):
 
     if not is_open:
         if (last_price_array[-1] >= np.max(last_price_array[:-1]) and
-            last_price_array[-1] > np.min(last_price_array[:-1] + 20)):
+            last_price_array[-1] > np.min(last_price_array[:-1]+20)):
             if now_sell > now_buy * 2:
                 price = data.loc[i + 1, 20] #买一价卖出
                 send_order(vol_all, i, -1, price, 1)
                 print(i, '卖开')
 
         if (last_price_array[-1] <= np.min(last_price_array[:-1]) and
-            last_price_array[-1] < np.max(last_price_array[:-1] - 20)):
+            last_price_array[-1] < np.max(last_price_array[:-1]-20)):
             if now_buy > now_sell * 2:
                 price = data.loc[i + 1, 10] #卖一价买入
                 send_order(vol_all, i, 1, price, 1)
@@ -82,7 +82,7 @@ for i in range(data.shape[0]):
                 send_order(vol_all, i, 1, price, 0)
                 print(i, '卖开止损')
 
-
+#%%
 plt.figure()
 plt.plot(vol_all[:, 5])
 plt.show()
