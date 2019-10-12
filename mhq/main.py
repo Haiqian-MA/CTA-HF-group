@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('data/tick-levelII/bu1912 (4).csv', header=None)
+data = pd.read_csv('data/tick-levelII/bu1912 (6).csv', header=None)
 
 #%%
 plt.plot(data[4])
@@ -35,8 +35,7 @@ def send_order(vol_all, tick, vol_num, price, is_open):
 for i in range(data.shape[0]):
     if i < 1000:
         continue
-    if i==20000:
-        break
+
     last_price_array = data.loc[i-1000:i, 4].values
     last_sell_vol = data.loc[i-20:i+1, 15:18].values #取前三列
     last_buy_vol = data.loc[i-20:i+1, 25:28] .values # 取前三列
